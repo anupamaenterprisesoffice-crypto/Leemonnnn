@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stock Game Ultra V5</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+</head>
+
+<body>
+
+<div id="login">
+  <h2>Login</h2>
+  <input id="user" placeholder="Username">
+  <input id="pass" type="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+</div>
+
+<div id="app" style="display:none">
+
+<h2>💰 <span id="bal">0</span> Lot £</h2>
+
+<input id="amount" placeholder="Amount">
+<button onclick="buy()">Buy</button>
+<button onclick="sell()">Sell</button>
+
+<h3>💸 Send Money</h3>
+<input id="toUser" placeholder="Username">
+<input id="sendAmt" placeholder="Amount">
+<button onclick="sendMoney()">Send</button>
+
+<h3>🏆 Leaderboard</h3>
+<div id="leaderboard"></div>
+
+<h3>💬 Chat</h3>
+<div id="chat"></div>
+<input id="msg">
+<button onclick="sendChat()">Send</button>
+
+<h3>📊 Chart</h3>
+<canvas id="chart" width="300" height="150"></canvas>
+
+<div id="adminPanel" style="display:none">
+  <h3>👑 Admin Panel</h3>
+  <input id="banUser" placeholder="Ban user">
+  <button onclick="ban()">Ban</button>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
